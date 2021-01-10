@@ -12,5 +12,14 @@
     "express": "^4.16.4"
   },
   "keywords": [],
-  "description": ""
+  "description": "## Description",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheCoaxial/HW11Express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheCoaxial/HW11Express/issues"
+  },
+  "homepage": "https://github.com/TheCoaxial/HW11Express#readme"
 }
