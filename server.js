@@ -12,6 +12,7 @@ var PORT = process.env.PORT || 3001;
 // Middleware for data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(__dirname));
 
 //Below will be the routes when they're created
 
