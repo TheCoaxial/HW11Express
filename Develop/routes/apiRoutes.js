@@ -16,7 +16,9 @@ module.exports = function(app){
 
         //Post route
         app.post("/api/notes", function(req, res){
-            
+            let newNote = req.body;
+            notes.push(newNote);
+            return console.log("Added note " + newNote.title);
         })
 
     })
