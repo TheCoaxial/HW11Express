@@ -7,7 +7,7 @@ var express = require("express");
 var app = express();
 
 //setting initial port
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3001;
 
 // Middleware for data parsing
 app.use(express.urlencoded({ extended: true }));
