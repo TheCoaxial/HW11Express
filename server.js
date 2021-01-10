@@ -15,6 +15,9 @@ app.use(express.json());
 
 //Below will be the routes when they're created
 
+require("./Develop/routes/apiRoutes")(app);
+require("./Develop/routes/htmlRoutes")(app);
+
 //Above will be the routes when they're created
 
 //starts server
