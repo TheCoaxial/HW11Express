@@ -1,4 +1,5 @@
 // Require fs
+const e = require('express');
 const fs = require('fs');
 
 
@@ -18,9 +19,17 @@ module.exports = function(app){
         app.post("/api/notes", function(req, res){
             let newNote = req.body;
             notes.push(newNote);
+            updateNotes();
             return console.log("Added note " + newNote.title);
         })
 
-    })
+        function updateNotes() {
+            fs.writeFile("db/db.json", JSON.stringify(notes, '\t'),err =>{
+                    if (err) throw err;
+                    return true;
+            });
+        }
+
+    });
 
 }
