@@ -17,7 +17,7 @@ module.exports = function(app){
 
         //Post route
         app.post("/api/notes", function(req, res){
-            let id = db.length;
+            let id = db.length + 1;
             let newNote = { title: req.body.title, text: req.body.text, id: id }; 
             db.push(newNote);
             updateNotes();
@@ -35,7 +35,7 @@ module.exports = function(app){
             let newId = 0;
             
             db = db.filter(currentNote => {
-            return currentNote.id !=  req.params.id;
+            return currentNote.id !=  req.params.id ;
         });
             for (currentNote of db) {
             currentNote.id = newId.toString();
